@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoyAndSalesCleanArchitect", "InventoyAndSalesCleanArchitect\InventoyAndSalesCleanArchitect.csproj", "{64FF708F-63B1-483D-9E90-316ED4B2C5D0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{BD2CF158-CC1C-469C-BA30-70258B912EA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{644D77CE-45FE-4799-8C64-DB222A91989B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8B3C8A01-3EA9-47FD-9BD1-F551DC5ED64B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{F5517482-DDC4-487C-ACA0-A52941AD7800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventorySales.Application", "..\InventorySales.Application\InventorySales.Application.csproj", "{AC533B8D-4FC6-43FE-8A21-84157F7E8511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +25,16 @@ Global
 		{64FF708F-63B1-483D-9E90-316ED4B2C5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64FF708F-63B1-483D-9E90-316ED4B2C5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64FF708F-63B1-483D-9E90-316ED4B2C5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC533B8D-4FC6-43FE-8A21-84157F7E8511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC533B8D-4FC6-43FE-8A21-84157F7E8511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC533B8D-4FC6-43FE-8A21-84157F7E8511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC533B8D-4FC6-43FE-8A21-84157F7E8511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC533B8D-4FC6-43FE-8A21-84157F7E8511} = {644D77CE-45FE-4799-8C64-DB222A91989B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D59B61B2-EEAA-4A46-9C51-A00CC1007F88}

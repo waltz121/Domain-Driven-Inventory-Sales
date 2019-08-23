@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventorySales.Application.Sales.Queries.GetSalesQueries;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,17 @@ namespace InventoyAndSalesCleanArchitect.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IGetSalesQuery _salesListQuery;
+
+        public HomeController(IGetSalesQuery salesListQuery)
+        {
+            _salesListQuery = salesListQuery;
+        }
         public ActionResult Index()
         {
-            return View();
+            var sales = _salesListQuery.Execute();
+            
+            return View(sales);
         }
 
         public ActionResult About()

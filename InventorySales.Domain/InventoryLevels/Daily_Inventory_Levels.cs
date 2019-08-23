@@ -1,9 +1,8 @@
-﻿using InventorySales.Domain.Common;
+﻿using InventorySales.Domain.CalendarReference;
+using InventorySales.Domain.Common;
+using InventorySales.Domain.Products;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventorySales.Domain.InventoryLevels
 {
@@ -13,5 +12,6 @@ namespace InventorySales.Domain.InventoryLevels
         public DateTime Day_Date { get; set; }
         public int Product_ID { get; set; }
         public int Quantity { get; set; }
+
     }
 }

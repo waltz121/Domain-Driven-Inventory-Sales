@@ -1,4 +1,5 @@
 ﻿using InventorySales.Domain.Common;
+using InventorySales.Domain.ProductsInSales;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace InventorySales.Domain.Sales
 {
-    public class Sales : IEntity
+    public class Sale : IEntity
     {
         public int Id { get; set; }
         public DateTime? Date_of_Sale { get; set; }
         public float? Total_Amount_of_Sale { get; set; }
+        public virtual ICollection<Products_in_Sales> Products_In_Sales { get; set; }
     }
 }

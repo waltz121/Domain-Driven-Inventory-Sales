@@ -1,4 +1,6 @@
 ﻿using InventorySales.Domain.Common;
+using InventorySales.Domain.InventoryLevels;
+using InventorySales.Domain.ProductsInSales;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace InventorySales.Domain.Products
 {
-    public class Products : IEntity
+    public class Product : IEntity
     {
         public int Id { get; set; }
         public int Product_Type_Code { get; set; }
@@ -17,5 +19,8 @@ namespace InventorySales.Domain.Products
         public int? Reorder_Level { get; set; }
         public int? Reorder_Quantity { get; set; }
         public string Other_Details { get; set; }
+        public virtual ICollection<Products_in_Sales> Products_In_Sales { get; set; }
+        public virtual ICollection<Daily_Inventory_Levels> Daily_Inventory_Levels { get; set; }
+         
     }
 }

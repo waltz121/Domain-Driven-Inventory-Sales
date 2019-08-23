@@ -1,4 +1,5 @@
-﻿using InventorySales.Application.Sales.Queries.GetSalesQueries;
+﻿
+using InventorySales.Application.Sales.Queries;
 using System.Web.Mvc;
 
 namespace InventoyAndSalesCleanArchitect.Controllers

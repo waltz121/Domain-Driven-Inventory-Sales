@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventorySales.Application
+namespace InventorySales.Application.Sales.Queries
 {
-    public class Class1
+    public interface IGetSalesQuery
     {
+        List<SalesModel> Execute();
     }
 }

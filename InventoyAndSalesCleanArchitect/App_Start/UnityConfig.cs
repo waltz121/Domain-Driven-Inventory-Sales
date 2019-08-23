@@ -1,5 +1,5 @@
 using InventorySales.Application.Interfaces;
-using InventorySales.Application.Sales.Queries.GetSalesQueries;
+using InventorySales.Application.Sales.Queries;
 using InventorySales.Persistence;
 using System.Web.Mvc;
 using Unity;

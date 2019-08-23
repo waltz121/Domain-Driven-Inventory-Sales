@@ -194,10 +194,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\InventorySales.Application\InventorySales.Application.csproj">
-      <Project>{AC533B8D-4FC6-43FE-8A21-84157F7E8511}</Project>
-      <Name>InventorySales.Application</Name>
-    </ProjectReference>
     <ProjectReference Include="..\InventorySales.Persistence\InventorySales.Persistence.csproj">
       <Project>{0C02C91C-5E57-4ECB-93A3-9E1E6A886BEE}</Project>
       <Name>InventorySales.Persistence</Name>

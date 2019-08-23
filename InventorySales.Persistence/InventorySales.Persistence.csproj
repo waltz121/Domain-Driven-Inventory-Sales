@@ -57,10 +57,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\InventorySales.Application\InventorySales.Application.csproj">
-      <Project>{AC533B8D-4FC6-43FE-8A21-84157F7E8511}</Project>
-      <Name>InventorySales.Application</Name>
-    </ProjectReference>
     <ProjectReference Include="..\InventorySales.Domain\InventorySales.Domain.csproj">
       <Project>{B096626F-5E3D-4795-B95C-9DF4576469E5}</Project>
       <Name>InventorySales.Domain</Name>

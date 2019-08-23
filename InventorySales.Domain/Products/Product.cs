@@ -3,15 +3,17 @@ using InventorySales.Domain.InventoryLevels;
 using InventorySales.Domain.ProductsInSales;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace InventorySales.Domain.Products
 {
-    public class Product : IEntity
+    public class Product
     {
-        public int Id { get; set; }
+        [Key]
+        public int Product_ID { get; set; }
         public int Product_Type_Code { get; set; }
         public string Product_Name { get; set; }
         public decimal Unit_Price { get; set; }

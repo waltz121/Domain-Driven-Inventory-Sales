@@ -1,7 +1,20 @@
-﻿@model  List<InventorySales.Domain.Sales.Sale>
+﻿@model  List<InventorySales.Application.Sales.Queries.GetSalesQueries.SalesModel>
 @{
     ViewBag.Title = "Home Page";
 }
 
-
-
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>DateOfSale</th>
+        <th>TotalAmountOfSale</th>
+    </tr>
+    @foreach(var d in Model)
+    {
+        <tr>
+            <td>@d.Sales_ID</td>
+            <td>@d.DateOfSale</td>
+            <td>@d.TotalAmountOfSale</td>
+        </tr>
+    }
+</table>

@@ -22,5 +22,10 @@ namespace InventorySales.Persistence
         public IDbSet<Product> Product { get; set; }
         public IDbSet<Daily_Inventory_Levels> Daily_Inventory_Levels { get; set; }
         public IDbSet<Ref_Calendar> Ref_Calendars { get; set; }
+
+        public void Save()
+        {
+            this.SaveChanges();
+        }
     }
 }

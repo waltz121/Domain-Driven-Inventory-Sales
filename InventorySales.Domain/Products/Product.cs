@@ -23,6 +23,5 @@ namespace InventorySales.Domain.Products
         public string Other_Details { get; set; }
         public virtual ICollection<Products_in_Sales> Products_In_Sales { get; set; }
         public virtual ICollection<Daily_Inventory_Levels> Daily_Inventory_Levels { get; set; }
-         
     }
 }

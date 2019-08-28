@@ -1,14 +1,15 @@
 ﻿
 using InventorySales.Application.Sales.Queries;
+using InventorySales.Application.Sales.Queries.GetSalesList;
 using System.Web.Mvc;
 
 namespace InventoyAndSalesCleanArchitect.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IGetSalesQuery _salesListQuery;
+        private readonly IGetSalesListQuery _salesListQuery;
 
-        public HomeController(IGetSalesQuery salesListQuery)
+        public HomeController(IGetSalesListQuery salesListQuery)
         {
             _salesListQuery = salesListQuery;
         }

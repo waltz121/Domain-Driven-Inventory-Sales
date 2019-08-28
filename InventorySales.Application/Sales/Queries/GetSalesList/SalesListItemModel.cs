@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventorySales.Application.Sales.Queries
+namespace InventorySales.Application.Sales.Queries.GetSalesList
 {
-    public class SalesModel
+    public class SalesListItemModel
     {
         public int Sales_ID { get; set; }
         public DateTime? DateOfSale { get; set; }

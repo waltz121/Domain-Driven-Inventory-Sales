@@ -1,5 +1,6 @@
 using InventorySales.Application.Interfaces;
 using InventorySales.Application.Sales.Queries;
+using InventorySales.Application.Sales.Queries.GetSalesList;
 using InventorySales.Persistence;
 using System.Web.Mvc;
 using Unity;
@@ -18,7 +19,7 @@ namespace InventoyAndSalesCleanArchitect
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IDatabaseService, InventorySystemsDatabaseService>();
-            container.RegisterType<IGetSalesQuery, GetSalesQuery>();
+            container.RegisterType<IGetSalesListQuery, GetSalesListQuery>();            
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
     }

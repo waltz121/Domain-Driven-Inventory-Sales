@@ -49,6 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IDatabaseService.cs" />
+    <Compile Include="Products\Queries\GetProductDetails\GetProductDetailsQuery.cs" />
+    <Compile Include="Products\Queries\GetProductDetails\IGetProductDetailsQuery.cs" />
+    <Compile Include="Products\Queries\GetProductDetails\ProductDetailsModel.cs" />
+    <Compile Include="Products\Queries\GetProductList\GetProductListQuery.cs" />
+    <Compile Include="Products\Queries\GetProductList\IGetProductListQuery.cs" />
+    <Compile Include="Products\Queries\GetProductList\ProductListItemModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sales\Queries\GetSalesList\GetSalesListQuery.cs" />
     <Compile Include="Sales\Queries\GetSalesList\IGetSalesListQuery.cs" />
@@ -66,7 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Products\Commands\" />
-    <Folder Include="Products\Queries\" />
     <Folder Include="Sales\Commands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

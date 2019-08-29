@@ -49,6 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IDatabaseService.cs" />
+    <Compile Include="Products\Commands\CreateProduct\CreateProductCommand.cs" />
+    <Compile Include="Products\Commands\CreateProduct\CreateProductModel.cs" />
+    <Compile Include="Products\Commands\CreateProduct\ICreateProductCommand.cs" />
+    <Compile Include="Products\Commands\DeleteProduct\DeleteProductCommand.cs" />
+    <Compile Include="Products\Commands\DeleteProduct\IDeleteProductCommand.cs" />
+    <Compile Include="Products\Commands\UpdateProduct\IUpdateProductCommand.cs" />
+    <Compile Include="Products\Commands\UpdateProduct\UpdateProductCommand.cs" />
+    <Compile Include="Products\Commands\UpdateProduct\UpdateProductModel.cs" />
+    <Compile Include="Products\Factory\IProductFactory.cs" />
+    <Compile Include="Products\Factory\ProductFactory.cs" />
     <Compile Include="Products\Queries\GetProductDetails\GetProductDetailsQuery.cs" />
     <Compile Include="Products\Queries\GetProductDetails\IGetProductDetailsQuery.cs" />
     <Compile Include="Products\Queries\GetProductDetails\ProductDetailsModel.cs" />
@@ -71,7 +81,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Products\Commands\" />
     <Folder Include="Sales\Commands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

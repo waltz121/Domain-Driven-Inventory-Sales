@@ -132,7 +132,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -194,13 +193,13 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InventoryAndSalesBootstrap\InventoryAndSalesBootstrap.csproj">
+      <Project>{19B33779-129F-4541-BC26-D0647AB89504}</Project>
+      <Name>InventoryAndSalesBootstrap</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InventorySales.Application\InventorySales.Application.csproj">
       <Project>{43A58E7E-A1E0-4C20-95FB-719821D46481}</Project>
       <Name>InventorySales.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InventorySales.Persistence\InventorySales.Persistence.csproj">
-      <Project>{0C02C91C-5E57-4ECB-93A3-9E1E6A886BEE}</Project>
-      <Name>InventorySales.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

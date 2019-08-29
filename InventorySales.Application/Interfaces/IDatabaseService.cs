@@ -21,5 +21,9 @@ namespace InventorySales.Application.Interfaces
         IDbSet<Product> Product { get; set; }
         IDbSet<Daily_Inventory_Levels> Daily_Inventory_Levels { get; set; }
         IDbSet<Ref_Calendar> Ref_Calendars { get; set; }
+
+        void Delete(object DeletedEntity);
+        void Update(object updateEntity);
+        void Save();
     }
 }

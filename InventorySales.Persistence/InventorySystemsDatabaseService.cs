@@ -22,10 +22,17 @@ namespace InventorySales.Persistence
         public IDbSet<Product> Product { get; set; }
         public IDbSet<Daily_Inventory_Levels> Daily_Inventory_Levels { get; set; }
         public IDbSet<Ref_Calendar> Ref_Calendars { get; set; }
-
-        public void Save()
+        public void Update(object updateEntity)
         {
+            this.Entry(updateEntity).State = EntityState.Modified;
+        }
+        public void Save()
+        {               
             this.SaveChanges();
+        }
+        public void Delete(object DeletedEntity)
+        {
+            this.Entry(DeletedEntity).State = EntityState.Deleted;
         }
     }
 }

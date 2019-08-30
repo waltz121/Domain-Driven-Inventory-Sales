@@ -13,6 +13,10 @@ namespace InventoyAndSalesCleanArchitect
     {
         protected void Application_Start()
         {
+            ViewEngines.Engines.Clear();
+
+            ViewEngines.Engines.Add(new CustomRazorViewEngine());
+
             UnityConfig.RegisterComponents();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

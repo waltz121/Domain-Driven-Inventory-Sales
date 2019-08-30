@@ -178,7 +178,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Home\Model\" />
-    <Folder Include="Home\Views\Product\" />
     <Folder Include="Product\Model\" />
   </ItemGroup>
   <ItemGroup>

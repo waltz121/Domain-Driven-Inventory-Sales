@@ -10,7 +10,7 @@ namespace InventorySales.Domain.InventoryLevels
     {
         public DateTime Day_Date { get; set; }
         public int Product_ID { get; set; }
-        public int Quantity { get; set; }
+        public int Levels { get; set; }
         public int Id { get; set; }
     }
 }

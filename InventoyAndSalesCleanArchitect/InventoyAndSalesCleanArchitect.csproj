@@ -137,6 +137,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Home\HomeController.cs" />
+    <Compile Include="Product\ProductController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Home\Views\Index.cshtml" />
+    <Content Include="Product\Views\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -176,7 +178,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Home\Model\" />
-    <Folder Include="Models\" />
+    <Folder Include="Home\Views\Product\" />
+    <Folder Include="Product\Model\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

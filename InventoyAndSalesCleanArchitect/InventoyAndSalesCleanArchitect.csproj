@@ -132,12 +132,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfigPresentation.cs" />
     <Compile Include="CustomRazorViewEngine.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Home\HomeController.cs" />
+    <Compile Include="Product\Model\CreateProductViewModel.cs" />
     <Compile Include="Product\ProductController.cs" />
+    <Compile Include="Product\Services\CreateProductViewModelFactory.cs" />
+    <Compile Include="Product\Services\ICreateProductViewModelFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +157,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Home\Views\Index.cshtml" />
     <Content Include="Product\Views\Index.cshtml" />
+    <Content Include="Product\Views\create.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -178,7 +183,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Home\Model\" />
-    <Folder Include="Product\Model\" />
+    <Folder Include="ProductTypeCode\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

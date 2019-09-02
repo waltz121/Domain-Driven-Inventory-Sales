@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using InventorySales.Domain.InventoryLevels;
 using InventorySales.Domain.Products;
 using InventorySales.Domain.ProductsInSales;
+using InventorySales.Domain.ProductTypes;
 
 namespace InventorySales.Application.Products.Factory
 {
@@ -16,6 +17,13 @@ namespace InventorySales.Application.Products.Factory
             var product = new Product();
             
             return product;
+        }
+
+        public Product_Types CreateProductTypes()
+        {
+            var productTypes = new Product_Types();
+
+            return productTypes;
         }
     }
 }

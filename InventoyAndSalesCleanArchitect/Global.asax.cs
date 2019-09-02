@@ -1,4 +1,5 @@
 ﻿using InventoryAndSalesBootstrap;
+using InventoyAndSalesCleanArchitect.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace InventoyAndSalesCleanArchitect
 
             ViewEngines.Engines.Add(new CustomRazorViewEngine());
 
-            UnityConfig.RegisterComponents();
+            UnityConfigPresentation.RegisterComponents(UnityConfig.RegisterComponents());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

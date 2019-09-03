@@ -14,7 +14,8 @@
                     </div>
                     <div class="form-group">
                         <label for="productTypeCode" class="control-label">Product Type Code: </label>
-                        @Html.TextBoxFor(x => x.createProductModel.ProductTypeCode, new { @class = "form-control", @id = "productTypeCode", })
+                        @Html.DropDownListFor(x => x.createProductModel.ProductTypeCode, Model.productTypesList, new { @class = "form-control", @id= "productTypeCode" })
+                        @*@Html.TextBoxFor(x => x.createProductModel.ProductTypeCode, new { @class = "form-control", @id = "productTypeCode", })*@
                     </div>
                     <div class="form-group">
                         <label for="productName" class="control-label">Product Name: </label>

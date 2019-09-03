@@ -49,11 +49,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IDatabaseService.cs" />
+    <Compile Include="Products\Commands\CreateProductTypes\CreateProductTypesCommand.cs" />
+    <Compile Include="Products\Commands\CreateProductTypes\CreateProductTypesModel.cs" />
+    <Compile Include="Products\Commands\CreateProductTypes\ICreateProductTypesCommand.cs" />
     <Compile Include="Products\Commands\CreateProduct\CreateProductCommand.cs" />
     <Compile Include="Products\Commands\CreateProduct\CreateProductModel.cs" />
     <Compile Include="Products\Commands\CreateProduct\ICreateProductCommand.cs" />
+    <Compile Include="Products\Commands\DeleteProductTypes\DeleteProductTypesCommand.cs" />
+    <Compile Include="Products\Commands\DeleteProductTypes\IDeleteProductTypesCommand.cs" />
     <Compile Include="Products\Commands\DeleteProduct\DeleteProductCommand.cs" />
     <Compile Include="Products\Commands\DeleteProduct\IDeleteProductCommand.cs" />
+    <Compile Include="Products\Commands\UpdateProductTypes\IUpdateProductTypesCommand.cs" />
+    <Compile Include="Products\Commands\UpdateProductTypes\UpdateProductTypesCommand.cs" />
+    <Compile Include="Products\Commands\UpdateProductTypes\UpdateProductTypesModel.cs" />
     <Compile Include="Products\Commands\UpdateProduct\IUpdateProductCommand.cs" />
     <Compile Include="Products\Commands\UpdateProduct\UpdateProductCommand.cs" />
     <Compile Include="Products\Commands\UpdateProduct\UpdateProductModel.cs" />
@@ -87,9 +95,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Products\Commands\CreateProductTypes\" />
-    <Folder Include="Products\Commands\DeleteProductTypes\" />
-    <Folder Include="Products\Commands\UpdateProductTypes\" />
     <Folder Include="Sales\Commands\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,44 @@
+﻿@model List<InventorySales.Application.Products.Queries.GetProductTypesList.GetProductTypesListModel>
+
+<h3>Product Type Code</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary list-panel" id="list-panel">
+                <div class="panel-heading list-panel-heading">
+                    <h1 class="panel-title list-panel-title">Products Type Code</h1>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered"
+                           style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>ProductCode</th>
+                                <th>ParentProductCode</th>
+                                <th>Product Description</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var productType in Model)
+                            {
+                                <tr>
+                                    <td>@productType.ProductTypeCode</td>
+                                    <td>@productType.ParentProductTypeCode</td>
+                                    <td>@productType.ProductTypeDescription</td>
+                                    <td>@Html.ActionLink("Delete", "delete", "ProductTypeCode", new { id = productType.ProductTypeCode } , new { @class = "btn btn-primary" })</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.ActionLink("Create Product Code","create", "ProductTypeCode", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+</div>

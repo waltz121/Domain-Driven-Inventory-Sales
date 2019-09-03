@@ -1,9 +1,14 @@
 using InventorySales.Application.Interfaces;
 using InventorySales.Application.Products.Commands.CreateProduct;
+using InventorySales.Application.Products.Commands.CreateProductTypes;
+using InventorySales.Application.Products.Commands.DeleteProductTypes;
 using InventorySales.Application.Products.Commands.UpdateProduct;
+using InventorySales.Application.Products.Commands.UpdateProductTypes;
 using InventorySales.Application.Products.Factory;
 using InventorySales.Application.Products.Queries.GetProductDetails;
 using InventorySales.Application.Products.Queries.GetProductList;
+using InventorySales.Application.Products.Queries.GetProductTypesDetails;
+using InventorySales.Application.Products.Queries.GetProductTypesList;
 using InventorySales.Application.Sales.Queries.GetSalesList;
 using InventorySales.Persistence;
 using System.Web.Mvc;
@@ -27,6 +32,12 @@ namespace InventoryAndSalesBootstrap
             container.RegisterType<IGetProductDetailsQuery, GetProductDetailsQuery>();
             container.RegisterType<IUpdateProductCommand, UpdateProductCommand>();
             container.RegisterType<IProductFactory, ProductFactory>();
+
+            container.RegisterType<IGetProductTypesListQuery, GetProductTypesListQuery>();
+            container.RegisterType<IGetProductTypesDetailsQuery, GetProductTypesDetailQuery>();
+            container.RegisterType<ICreateProductTypesCommand, CreateProductTypesCommand>();
+            container.RegisterType<IUpdateProductTypesCommand, UpdateProductTypesCommand>();
+            container.RegisterType<IDeleteProductTypesCommand, DeleteProductTypesCommand>();
             
             container.RegisterType<IGetSalesListQuery, GetSalesListQuery>();
 

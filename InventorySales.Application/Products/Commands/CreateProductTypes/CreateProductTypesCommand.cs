@@ -25,6 +25,7 @@ namespace InventorySales.Application.Products.Commands.CreateProductTypes
             product.Product_Type_Description = model.ProductTypeDescription;
 
             database.Product_Types.Add(product);
+            database.Save();
         }
     }
 }

@@ -138,6 +138,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Home\HomeController.cs" />
+    <Compile Include="ProductTypeCode\Model\CreateProductTypeViewModel.cs" />
+    <Compile Include="ProductTypeCode\ProductTypeCodeController.cs" />
+    <Compile Include="ProductTypeCode\Services\CreateProductTypeViewModelFactory.cs" />
+    <Compile Include="ProductTypeCode\Services\ICreateProductTypeViewModelFactory.cs" />
     <Compile Include="Product\Model\CreateProductViewModel.cs" />
     <Compile Include="Product\ProductController.cs" />
     <Compile Include="Product\Services\CreateProductViewModelFactory.cs" />
@@ -158,6 +162,8 @@
     <Content Include="Home\Views\Index.cshtml" />
     <Content Include="Product\Views\Index.cshtml" />
     <Content Include="Product\Views\create.cshtml" />
+    <Content Include="ProductTypeCode\Views\Index.cshtml" />
+    <Content Include="ProductTypeCode\Views\create.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -183,7 +189,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Home\Model\" />
-    <Folder Include="ProductTypeCode\" />
+    <Folder Include="Home\Views\ProductTypeCode\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,4 +1,5 @@
 ﻿using InventoyAndSalesCleanArchitect.Product.Services;
+using InventoyAndSalesCleanArchitect.ProductTypeCode.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace InventoyAndSalesCleanArchitect.App_Start
         public static void RegisterComponents(UnityContainer container)
         {            
             container.RegisterType<ICreateProductViewModelFactory, CreateProductViewModelFactory>();
+            container.RegisterType<ICreateProductTypeViewModelFactory, CreateProductTypeViewModelFactory>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

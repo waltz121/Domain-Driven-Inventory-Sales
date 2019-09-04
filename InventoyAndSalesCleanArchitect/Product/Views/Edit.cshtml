@@ -1,0 +1,56 @@
+﻿@model InventoyAndSalesCleanArchitect.Product.Model.EditProductViewModel
+
+<h2>Edit Products</h2>
+
+<div class="container">
+    @using (Html.BeginForm("Edit","Product",FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-7">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="ProductId" class="control-label">Product ID: </label>
+                            @Html.TextBoxFor(x => x.UpdateProductModel.ProductID, new { @class = "form-control", @id = "ProductId", @readonly = "readonly" })
+                        </div>
+                        <div class="form-group">
+                            <label for="productTypeCode" class="control-label">Product Type Code: </label>
+                            @Html.DropDownListFor(x => x.UpdateProductModel.ProductTypeCode, Model.productTypesList, new { @class = "form-control", @id = "productTypeCode" })
+                            @*@Html.TextBoxFor(x => x.createProductModel.ProductTypeCode, new { @class = "form-control", @id = "productTypeCode", })*@
+                        </div>
+                        <div class="form-group">
+                            <label for="productName" class="control-label">Product Name: </label>
+                            @Html.TextBoxFor(x => x.UpdateProductModel.ProductName, new { @class = "form-control", @id = "productName" })
+                        </div>
+                        <div class="form-group">
+                            <label for="unitPrice" class="control-label">Unit Price: </label>
+                            @Html.TextBoxFor(x => x.UpdateProductModel.UnitPrice, new { @class = "form-control", @id = "unitPrice" })
+                        </div>
+                        <div class="form-group">
+                            <label for="productDescription" class="control-label">Product Description: </label>
+                            @Html.TextAreaFor(x => x.UpdateProductModel.ProductDescription, new { @class = "form-control", @id = "productDescription" })
+                        </div>
+                        <div class="form-group">
+                            <label for="reorderLevel" class="control-label">Reorder Level: </label>
+                            @Html.TextBoxFor(x => x.UpdateProductModel.ReorderLevel, new { @class = "form-control", @id = "reorderLevel" })
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reorderQuantity" class="control-label">Reorder Quantity: </label>
+                            @Html.TextBoxFor(x => x.UpdateProductModel.ReorderQuantity, new { @class = "form-control", @id = "reorderQuantity" })
+                        </div>
+
+                        <div class="form-group">
+                            <label for="otherDetails" class="control-label">Other Details: </label>
+                            @Html.TextAreaFor(x => x.UpdateProductModel.OtherDetails, new { @class = "form-control", @id = "otherDetails" })
+                        </div>
+                        <div class="col-md-3">
+                            @*@Html.ActionLink("Save", "create", "Product", Model, new { @class = "btn btn-primary" })*@
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+</div>

@@ -16,6 +16,7 @@ namespace InventoyAndSalesCleanArchitect.App_Start
         {            
             container.RegisterType<ICreateProductViewModelFactory, CreateProductViewModelFactory>();
             container.RegisterType<ICreateProductTypeViewModelFactory, CreateProductTypeViewModelFactory>();
+            container.RegisterType<IEditProductViewModelFactory, EditProductViewModelFactory>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

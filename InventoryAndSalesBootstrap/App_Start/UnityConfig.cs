@@ -1,6 +1,7 @@
 using InventorySales.Application.Interfaces;
 using InventorySales.Application.Products.Commands.CreateProduct;
 using InventorySales.Application.Products.Commands.CreateProductTypes;
+using InventorySales.Application.Products.Commands.DeleteProduct;
 using InventorySales.Application.Products.Commands.DeleteProductTypes;
 using InventorySales.Application.Products.Commands.UpdateProduct;
 using InventorySales.Application.Products.Commands.UpdateProductTypes;
@@ -32,12 +33,13 @@ namespace InventoryAndSalesBootstrap
             container.RegisterType<IGetProductDetailsQuery, GetProductDetailsQuery>();
             container.RegisterType<IUpdateProductCommand, UpdateProductCommand>();
             container.RegisterType<IProductFactory, ProductFactory>();
+            container.RegisterType<IDeleteProductCommand, DeleteProductCommand>();
 
             container.RegisterType<IGetProductTypesListQuery, GetProductTypesListQuery>();
             container.RegisterType<IGetProductTypesDetailsQuery, GetProductTypesDetailQuery>();
             container.RegisterType<ICreateProductTypesCommand, CreateProductTypesCommand>();
             container.RegisterType<IUpdateProductTypesCommand, UpdateProductTypesCommand>();
-            container.RegisterType<IDeleteProductTypesCommand, DeleteProductTypesCommand>();
+            container.RegisterType<IDeleteProductTypesCommand, DeleteProductTypesCommand>();            
             
             container.RegisterType<IGetSalesListQuery, GetSalesListQuery>();
 

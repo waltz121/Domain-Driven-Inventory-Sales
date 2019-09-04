@@ -143,9 +143,12 @@
     <Compile Include="ProductTypeCode\Services\CreateProductTypeViewModelFactory.cs" />
     <Compile Include="ProductTypeCode\Services\ICreateProductTypeViewModelFactory.cs" />
     <Compile Include="Product\Model\CreateProductViewModel.cs" />
+    <Compile Include="Product\Model\EditProductViewModel.cs" />
     <Compile Include="Product\ProductController.cs" />
     <Compile Include="Product\Services\CreateProductViewModelFactory.cs" />
+    <Compile Include="Product\Services\EditProductViewModelFactory.cs" />
     <Compile Include="Product\Services\ICreateProductViewModelFactory.cs" />
+    <Compile Include="Product\Services\IEditProductViewModelFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +167,7 @@
     <Content Include="Product\Views\create.cshtml" />
     <Content Include="ProductTypeCode\Views\Index.cshtml" />
     <Content Include="ProductTypeCode\Views\create.cshtml" />
+    <Content Include="Product\Views\Edit.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

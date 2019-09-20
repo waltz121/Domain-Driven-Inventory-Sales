@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 
 namespace InventorySales.Domain.Sales
 {
-    public class Sale 
+    public class Sale: IEntity
     {
-        [Key]
-        public int Sales_ID { get; set; }
         public DateTime? Date_of_Sale { get; set; }
         public double? Total_Amount_of_Sale { get; set; }
         public virtual ICollection<Products_in_Sales> Products_In_Sales { get; set; }
+        public int Id { get; set; }
     }
 }

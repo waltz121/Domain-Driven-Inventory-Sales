@@ -71,4 +71,7 @@
   <ItemGroup>
     <RefactorLog Include="InventorySales.SQLDB.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocations\InventorySales.SQLDB.publish.xml" />
+  </ItemGroup>
 </Project>

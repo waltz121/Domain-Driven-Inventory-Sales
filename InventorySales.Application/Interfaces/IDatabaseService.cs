@@ -15,7 +15,7 @@ namespace InventorySales.Application.Interfaces
 {
     public interface IDatabaseService
     {
-        IDbSet<Sale> Sale { get; set; }
+        IDbSet<Sale> Sales { get; set; }
         IDbSet<Product_Types> Product_Types { get; set; }
         IDbSet<Products_in_Sales> Products_In_Sales { get; set; }
         IDbSet<Product> Product { get; set; }

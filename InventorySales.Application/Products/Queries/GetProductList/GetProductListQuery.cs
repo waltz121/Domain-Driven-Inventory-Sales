@@ -18,21 +18,21 @@ namespace InventorySales.Application.Products.Queries.GetProductList
         public List<ProductListItemModel> Execute()
         {
             var Product = database.Product
-                    .Select(x => new ProductListItemModel()
-                    {
-                        ProductID = x.Product_ID,
-                        ProductTypeCode = x.Product_Type_Code,
-                        ProductName = x.Product_Name,
-                        UnitPrice = x.Unit_Price,
-                        ProductDescription = x.Product_Description,
-                        ReorderLevel = x.Reorder_Level,
-                        ReorderQuantity = x.Reorder_Quantity,
-                        OtherDetails = x.Other_Details,
-                        ProductsInSales = x.Products_In_Sales,
-                        DailyInventoryLevels = x.Daily_Inventory_Levels
-                    });
+               .Select(x => new ProductListItemModel()
+               {
+                   ProductID = x.Id,
+                   ProductTypeCode = x.Product_Type_Code,
+                   ProductName = x.Product_Name,
+                   UnitPrice = x.Unit_Price,
+                   ProductDescription = x.Product_Description,
+                   ReorderLevel = x.Reorder_Level,
+                   ReorderQuantity = x.Reorder_Quantity,
+                   OtherDetails = x.Other_Details
+                  
+               });
 
             return Product.ToList();
+
         }
     }
 }

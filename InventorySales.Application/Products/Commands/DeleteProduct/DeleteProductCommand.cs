@@ -16,7 +16,7 @@ namespace InventorySales.Application.Products.Commands.DeleteProduct
         }
         public void Execute(int ID)
         {
-            var product = database.Product.Where(x => x.Product_ID == ID).Single();
+            var product = database.Product.Where(x => x.Id == ID).Single();
 
             database.Delete(product);
             database.Save();

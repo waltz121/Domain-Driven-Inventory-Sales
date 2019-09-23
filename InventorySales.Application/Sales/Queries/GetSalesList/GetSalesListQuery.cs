@@ -18,10 +18,10 @@ namespace InventorySales.Application.Sales.Queries.GetSalesList
 
         public List<SalesListItemModel> Execute()
         {
-            var Sale = database.Sale
+            var Sale = database.Sales
              .Select(x => new SalesListItemModel()
              {
-                 Sales_ID = x.Sales_ID,
+                 Sales_ID = x.Id,
                  TotalAmountOfSale = x.Total_Amount_of_Sale,
                  DateOfSale = x.Date_of_Sale
              });

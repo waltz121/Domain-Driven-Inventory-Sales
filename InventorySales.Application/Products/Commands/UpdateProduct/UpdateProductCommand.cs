@@ -16,7 +16,7 @@ namespace InventorySales.Application.Products.Commands.UpdateProduct
         }
         public void Execute(UpdateProductModel updateProductModel)
         {
-            var product = database.Product.Where(x => x.Product_ID == updateProductModel.ProductID).Single();
+            var product = database.Product.Where(x => x.Id == updateProductModel.ProductID).Single();
             product.Product_Type_Code = updateProductModel.ProductTypeCode;
             product.Product_Name = updateProductModel.ProductName;
             product.Unit_Price = updateProductModel.UnitPrice;

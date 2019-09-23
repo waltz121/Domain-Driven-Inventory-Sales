@@ -23,7 +23,7 @@ namespace InventorySales.Application.Products.Commands.CreateProduct
         {
 
             var product = factory.CreateProduct();
-            product.Product_ID = createProductModel.ProductID;
+            product.Id = createProductModel.ProductID;
             product.Product_Type_Code = createProductModel.ProductTypeCode;
             product.Product_Name = createProductModel.ProductName;
             product.Unit_Price = createProductModel.UnitPrice;

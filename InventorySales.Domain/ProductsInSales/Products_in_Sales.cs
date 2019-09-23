@@ -11,8 +11,8 @@ namespace InventorySales.Domain.ProductsInSales
 {
     public class Products_in_Sales: IEntity
     {
-        public int Sales_ID { get; set; }
-        public int Product_ID { get; set; }
+        public int Sales_Id { get; set; }
+        public int Product_Id { get; set; }
         public int Quantity { get; set; }
         public int Id { get; set; }
     }

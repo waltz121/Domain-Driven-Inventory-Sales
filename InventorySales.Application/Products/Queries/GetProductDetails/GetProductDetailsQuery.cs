@@ -17,10 +17,10 @@ namespace InventorySales.Application.Products.Queries.GetProductDetails
         public ProductDetailsModel Execute(int ID)
         {
             var Product = database.Product
-                            .Where(x => x.Product_ID == ID)
+                            .Where(x => x.Id == ID)
                             .Select(x => new ProductDetailsModel()
                             {
-                                ProductID = x.Product_ID,
+                                ProductID = x.Id,
                                 ProductTypeCode = x.Product_Type_Code,
                                 ProductName = x.Product_Name,
                                 UnitPrice = x.Unit_Price,

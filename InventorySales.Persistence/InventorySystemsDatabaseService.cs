@@ -16,7 +16,7 @@ namespace InventorySales.Persistence
 {
     public class InventorySystemsDatabaseService: DbContext, IDatabaseService
     {
-        public IDbSet<Sale> Sale { get; set; }
+        public IDbSet<Sale> Sales { get; set; }
         public IDbSet<Product_Types> Product_Types { get; set; }
         public IDbSet<Products_in_Sales> Products_In_Sales { get; set; }
         public IDbSet<Product> Product { get; set; }

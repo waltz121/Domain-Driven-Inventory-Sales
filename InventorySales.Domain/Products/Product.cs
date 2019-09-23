@@ -10,10 +10,8 @@ using System.Threading.Tasks;
 
 namespace InventorySales.Domain.Products
 {
-    public class Product
+    public class Product: IEntity
     {
-        [Key]
-        public int Product_ID { get; set; }
         public int Product_Type_Code { get; set; }
         public string Product_Name { get; set; }
         public decimal Unit_Price { get; set; }
@@ -23,5 +21,6 @@ namespace InventorySales.Domain.Products
         public string Other_Details { get; set; }
         public virtual ICollection<Products_in_Sales> Products_In_Sales { get; set; }
         public virtual ICollection<Daily_Inventory_Levels> Daily_Inventory_Levels { get; set; }
+        public int Id { get; set; }
     }
 }

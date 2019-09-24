@@ -80,6 +80,15 @@
     <Compile Include="Products\Queries\GetProductTypesList\GetProductTypesListQuery.cs" />
     <Compile Include="Products\Queries\GetProductTypesList\IGetProductTypesListQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\Commands\CreateSale\CreateSaleModel.cs" />
+    <Compile Include="Sales\Commands\CreateSale\CreateSaleCommand.cs" />
+    <Compile Include="Sales\Commands\CreateSale\ICreateSaleCommand.cs" />
+    <Compile Include="Sales\Commands\CreateSale\ProductInSaleModel.cs" />
+    <Compile Include="Sales\Factory\ISaleFactory.cs" />
+    <Compile Include="Sales\Factory\SaleFactory.cs" />
+    <Compile Include="Sales\Queries\GetSaleDetails\GetSaleDetailsQuery.cs" />
+    <Compile Include="Sales\Queries\GetSaleDetails\IGetSaleDetailsQuery.cs" />
+    <Compile Include="Sales\Queries\GetSaleDetails\SaleDetailsModel.cs" />
     <Compile Include="Sales\Queries\GetSalesList\GetSalesListQuery.cs" />
     <Compile Include="Sales\Queries\GetSalesList\IGetSalesListQuery.cs" />
     <Compile Include="Sales\Queries\GetSalesList\SalesListItemModel.cs" />
@@ -95,7 +104,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Sales\Commands\" />
+    <Folder Include="Sales\Commands\DeleteSale\" />
+    <Folder Include="Sales\Commands\UpdateSale\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,6 +10,7 @@ using InventorySales.Application.Products.Queries.GetProductDetails;
 using InventorySales.Application.Products.Queries.GetProductList;
 using InventorySales.Application.Products.Queries.GetProductTypesDetails;
 using InventorySales.Application.Products.Queries.GetProductTypesList;
+using InventorySales.Application.Sales.Queries.GetSaleDetails;
 using InventorySales.Application.Sales.Queries.GetSalesList;
 using InventorySales.Persistence;
 using System.Web.Mvc;
@@ -28,6 +29,9 @@ namespace InventoryAndSalesBootstrap
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
+
+            container.RegisterType<IGetSaleDetailsQuery, GetSaleDetailsQuery>();
+
             container.RegisterType<ICreateProductCommand, CreateProductCommand>();
             container.RegisterType<IGetProductListQuery, GetProductListQuery>();
             container.RegisterType<IGetProductDetailsQuery, GetProductDetailsQuery>();

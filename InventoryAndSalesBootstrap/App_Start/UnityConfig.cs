@@ -10,6 +10,8 @@ using InventorySales.Application.Products.Queries.GetProductDetails;
 using InventorySales.Application.Products.Queries.GetProductList;
 using InventorySales.Application.Products.Queries.GetProductTypesDetails;
 using InventorySales.Application.Products.Queries.GetProductTypesList;
+using InventorySales.Application.Sales.Commands.CreateSale;
+using InventorySales.Application.Sales.Factory;
 using InventorySales.Application.Sales.Queries.GetSaleDetails;
 using InventorySales.Application.Sales.Queries.GetSalesList;
 using InventorySales.Persistence;
@@ -31,6 +33,8 @@ namespace InventoryAndSalesBootstrap
             // e.g. container.RegisterType<ITestService, TestService>();
 
             container.RegisterType<IGetSaleDetailsQuery, GetSaleDetailsQuery>();
+            container.RegisterType<ICreateSaleCommand, CreateSaleCommand>();
+            container.RegisterType<ISaleFactory, SaleFactory>();
 
             container.RegisterType<ICreateProductCommand, CreateProductCommand>();
             container.RegisterType<IGetProductListQuery, GetProductListQuery>();

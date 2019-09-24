@@ -150,6 +150,10 @@
     <Compile Include="Product\Services\ICreateProductViewModelFactory.cs" />
     <Compile Include="Product\Services\IEditProductViewModelFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sale\Model\CreateSaleViewModel.cs" />
+    <Compile Include="Sale\SaleController.cs" />
+    <Compile Include="Sale\Services\CreateSaleViewModelFactory.cs" />
+    <Compile Include="Sale\Services\ICreateSaleViewModelFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -168,6 +172,8 @@
     <Content Include="ProductTypeCode\Views\Index.cshtml" />
     <Content Include="ProductTypeCode\Views\create.cshtml" />
     <Content Include="Product\Views\Edit.cshtml" />
+    <Content Include="Sale\Views\Index.cshtml" />
+    <Content Include="Sale\Views\Create.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -194,6 +200,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Home\Model\" />
     <Folder Include="Home\Views\ProductTypeCode\" />
+    <Folder Include="Home\Views\Sale\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,0 +1,35 @@
+﻿@model InventoyAndSalesCleanArchitect.Sale.Model.CreateSaleViewModel
+
+<h2>Create Sales</h2>
+
+<div class="container">
+    @using(Html.BeginForm("Create", "Sale", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-7">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="SalesId" class="control-label">Sales ID: </label>
+                        @Html.TextBoxFor(x => x.createSaleModel.Id, new { @class = "form-control", @readonly = "readonly" })
+                    </div>
+                    <div class="form-group">
+                        <label for="DateOfSale" class="control-label">Date of Sale: </label>
+                        @Html.TextBoxFor(x => x.createSaleModel.DateOfSale, new { @class = "form-control", @id = "DateOfSale"  })
+                    </div>
+                    <div class="form-group">
+                        <label for="Quantity" class="control-label">Quantity: </label>
+                        @Html.TextBoxFor(x => x.createSaleModel.Quantity, new { @class = "form-control", @id = "Quantity" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Products" class="control-label">Products: </label>
+                        @Html.DropDownListFor(x => x.SelectedProductValue, Model.Products, new { @class = "form-control", @id = "Products" })
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    }
+</div>

@@ -1,0 +1,44 @@
+﻿@model List<InventorySales.Application.Sales.Queries.GetSalesList.SalesListItemModel>
+<h3>Sales Editor</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary list-panel" id="list-panel">
+                <div class="panel-heading list-panel-heading">
+                    <h1 class="panel-title list-panel-title">Sales</h1>
+                </div>
+                <div class="panel-body">
+                    <table id="assets-data-table"
+                           class="table table-striped table-bordered"
+                           style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Edit</th>
+                                <th>SalesID</th>
+                                <th>Date of Sale</th>
+                                <th>Total Amount of Sale</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          @foreach(var sales in Model)
+                          {
+                              <tr>
+                                  <td>@Html.ActionLink("Edit","Edit", "Sales", new { id = sales.Sales_ID }, new { @class = "btn btn-primary" })</td>
+                                  <td>@sales.Sales_ID</td>
+                                  <td>@sales.DateOfSale</td>
+                                  <td>@sales.TotalAmountOfSale</td>
+                              </tr>
+                          }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            @Html.ActionLink("Create Sales", "Create", "Sale", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+
+</div>

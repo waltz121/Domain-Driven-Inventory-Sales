@@ -3,33 +3,73 @@
 <h2>Create Sales</h2>
 
 <div class="container">
-    @using(Html.BeginForm("Create", "Sale", FormMethod.Post))
+    @using (Html.BeginForm("Create", "Sale", FormMethod.Post))
     {
+
+    <form class="form-horizontal">
         <div class="row">
             <div class="col-md-7">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="SalesId" class="control-label">Sales ID: </label>
-                        @Html.TextBoxFor(x => x.createSaleModel.Id, new { @class = "form-control", @readonly = "readonly" })
-                    </div>
-                    <div class="form-group">
-                        <label for="DateOfSale" class="control-label">Date of Sale: </label>
-                        @Html.TextBoxFor(x => x.createSaleModel.DateOfSale, new { @class = "form-control", @id = "DateOfSale"  })
-                    </div>
-                    <div class="form-group">
-                        <label for="Quantity" class="control-label">Quantity: </label>
-                        @Html.TextBoxFor(x => x.createSaleModel.Quantity, new { @class = "form-control", @id = "Quantity" })
-                    </div>
-                    <div class="form-group">
-                        <label for="Products" class="control-label">Products: </label>
-                        @Html.DropDownListFor(x => x.SelectedProductValue, Model.Products, new { @class = "form-control", @id = "Products" })
-                    </div>
-                    <div class="col-md-3">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
-                </form>
+                <div class="form-group">
+                    <label for="SalesId" class="control-label">Sales ID: </label>
+                    @Html.TextBoxFor(x => x.createSaleModel.Id, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+                <div class="form-group">
+                    <label for="DateOfSale" class="control-label">Date of Sale: </label>
+                    @Html.TextBoxFor(x => x.createSaleModel.DateOfSale, new { @class = "form-control", @id = "DateOfSale" })
+                </div>
+               
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="Products" class="control-label">Products: </label>
+                    @Html.DropDownListFor(x => x.SelectedProductValue, Model.Products, new { @class = "form-control", @id = "Products" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="Quantity" class="control-label">Quantity: </label>
+                    @Html.TextBoxFor(x => x.createSaleModel.Quantity, new { @class = "form-control", @id = "Quantity" })
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group">
+                    <label for="btnAdd" class="control-label"></label>
+                    <button class="btn btn-primary form-control" id="btnAdd">Add</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>ProductID</th>
+                        <th>ProductName</th>
+                        <th>UnitPrice</th>
+                        <th>ProductDescription</th>
+                        <th>Quantity</th>
+                    </tr>
+                    @foreach(var d in Model.AddedProducts)
+                    {
+                        <tr>
+                            <td>@d.ProductID</td>
+                            <td>@d.ProductName</td>
+                            <td>@d.UnitPrice</td>
+                            <td>@d.ProductDescription</td>
+                            <td>@Model.createSaleModel.Quantity</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+      
+        <div class="row">
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>      
+    </form>
 
     }
 </div>

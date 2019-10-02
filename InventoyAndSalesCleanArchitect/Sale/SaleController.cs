@@ -42,5 +42,11 @@ namespace InventoyAndSalesCleanArchitect.Sale
             return RedirectToAction("Index");
         }
 
+        //[Route("Add")]
+        //public ActionResult Add(CreateSaleViewModel createSaleViewModel)
+        //{
+
+        //}
+
     }
 }

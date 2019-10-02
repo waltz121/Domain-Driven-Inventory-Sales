@@ -22,6 +22,7 @@ namespace InventoyAndSalesCleanArchitect.Sale.Services
             CreateSaleViewModel viewModel = new CreateSaleViewModel();
             viewModel.createSaleModel = new CreateSaleModel();
             viewModel.Products = new List<SelectListItem>();
+            viewModel.AddedProducts = new List<ProductListItemModel>();
 
             var ProductList = getProductListQuery.Execute();
             foreach(var i in ProductList)

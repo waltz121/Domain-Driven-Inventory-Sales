@@ -26,6 +26,10 @@ namespace InventoyAndSalesCleanArchitect
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/Site.css"));
+
+            bundles.Add(new ScriptBundle("~/CustomScripts").Include(
+                "~/CustomScripts/Add.js"
+                ));
         }
     }
 }

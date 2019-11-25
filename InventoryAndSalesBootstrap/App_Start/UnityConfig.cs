@@ -6,6 +6,7 @@ using InventorySales.Application.Products.Commands.DeleteProductTypes;
 using InventorySales.Application.Products.Commands.UpdateProduct;
 using InventorySales.Application.Products.Commands.UpdateProductTypes;
 using InventorySales.Application.Products.Factory;
+using InventorySales.Application.Products.Queries.FindProductLists;
 using InventorySales.Application.Products.Queries.GetProductDetails;
 using InventorySales.Application.Products.Queries.GetProductList;
 using InventorySales.Application.Products.Queries.GetProductTypesDetails;
@@ -43,6 +44,7 @@ namespace InventoryAndSalesBootstrap
             container.RegisterType<IProductFactory, ProductFactory>();
             container.RegisterType<IDeleteProductCommand, DeleteProductCommand>();
 
+            container.RegisterType<IFindProductListQuery, FindProductListQuery>();
             container.RegisterType<IGetProductTypesListQuery, GetProductTypesListQuery>();
             container.RegisterType<IGetProductTypesDetailsQuery, GetProductTypesDetailQuery>();
             container.RegisterType<ICreateProductTypesCommand, CreateProductTypesCommand>();

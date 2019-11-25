@@ -67,6 +67,8 @@
     <Compile Include="Products\Commands\UpdateProduct\UpdateProductModel.cs" />
     <Compile Include="Products\Factory\IProductFactory.cs" />
     <Compile Include="Products\Factory\ProductFactory.cs" />
+    <Compile Include="Products\Queries\FindProductLists\FindProductListQuery.cs" />
+    <Compile Include="Products\Queries\FindProductLists\IFindProductListQuery.cs" />
     <Compile Include="Products\Queries\GetProductDetails\GetProductDetailsQuery.cs" />
     <Compile Include="Products\Queries\GetProductDetails\IGetProductDetailsQuery.cs" />
     <Compile Include="Products\Queries\GetProductDetails\ProductDetailsModel.cs" />

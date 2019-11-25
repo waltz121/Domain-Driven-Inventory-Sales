@@ -28,7 +28,7 @@ namespace InventoyAndSalesCleanArchitect
                       "~/Content/Site.css"));
 
             bundles.Add(new ScriptBundle("~/CustomScripts").Include(
-                "~/CustomScripts/Add.js"
+                "~/Scripts/CustomScripts/Add.js"
                 ));
         }
     }

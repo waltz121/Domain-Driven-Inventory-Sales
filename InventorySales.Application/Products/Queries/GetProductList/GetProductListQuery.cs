@@ -1,9 +1,6 @@
 ﻿using InventorySales.Application.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventorySales.Application.Products.Queries.GetProductList
 {
@@ -28,11 +25,10 @@ namespace InventorySales.Application.Products.Queries.GetProductList
                    ReorderLevel = x.Reorder_Level,
                    ReorderQuantity = x.Reorder_Quantity,
                    OtherDetails = x.Other_Details
-                  
+
                });
 
             return Product.ToList();
-
         }
     }
 }

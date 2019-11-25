@@ -1,7 +1,11 @@
-﻿using InventorySales.Application.Sales.Commands.CreateSale;
+﻿using InventorySales.Application.Products.Queries.FindProductLists;
+using InventorySales.Application.Products.Queries.GetProductList;
+using InventorySales.Application.Sales.Commands.CreateSale;
 using InventorySales.Application.Sales.Queries.GetSalesList;
 using InventoyAndSalesCleanArchitect.Sale.Model;
 using InventoyAndSalesCleanArchitect.Sale.Services;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace InventoyAndSalesCleanArchitect.Sale
@@ -11,12 +15,14 @@ namespace InventoyAndSalesCleanArchitect.Sale
         private readonly IGetSalesListQuery salesListQuery;
         private readonly ICreateSaleViewModelFactory createSaleViewModelFactory;
         private readonly ICreateSaleCommand createSaleCommand;
+        private readonly IFindProductListQuery findProductListQuery;
         public SaleController(IGetSalesListQuery salesListQuery, ICreateSaleViewModelFactory createSaleViewModelFactory,
-                              ICreateSaleCommand createSaleCommand)
+                              ICreateSaleCommand createSaleCommand, IFindProductListQuery findProductListQuery)
         {
             this.salesListQuery = salesListQuery;
             this.createSaleViewModelFactory = createSaleViewModelFactory;
             this.createSaleCommand = createSaleCommand;
+            this.findProductListQuery = findProductListQuery;
         }
         // GET: Sale
         public ActionResult Index()
@@ -42,11 +48,20 @@ namespace InventoyAndSalesCleanArchitect.Sale
             return RedirectToAction("Index");
         }
 
-        //[Route("Add")]
-        //public ActionResult Add(CreateSaleViewModel createSaleViewModel)
-        //{
+        [Route("Add")]
+        public ActionResult Add(int quantity, int productId, string productDescription)
+        {
+            List<ProductListItemModel> productLists = new List<ProductListItemModel>();
+            ProductListItemModel listItemModel = new ProductListItemModel();
 
-        //}
+            listItemModel = findProductListQuery.Execute(productId).SingleOrDefault();
+
+            productLists.Add(listItemModel);
+            Session["AddedListOfProducts"] = productLists;
+
+
+            return Json(productLists, JsonRequestBehavior.AllowGet);
+        }
 
     }
 }

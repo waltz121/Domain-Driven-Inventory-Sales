@@ -67,6 +67,7 @@
     <Build Include="dbo\tables\Products_in_Sales.sql" />
     <Build Include="dbo\tables\Daily_Inventory_Levels.sql" />
     <Build Include="dbo\tables\Ref_Calendar.sql" />
+    <Build Include="dbo\tables\Product_Image.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="InventorySales.SQLDB.refactorlog" />
